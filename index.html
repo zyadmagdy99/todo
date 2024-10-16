@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="bg-[#F7F7F9] h-screen">
+        <div class="top p-6 h-[12rem] bg-[url('./images/bg-mobile-light.jpg')] md:bg-[url('./images/bg-desktop-light.jpg')] bg-cover">
+            <div class="max-w-[30rem] m-auto">
+
+                <div class="flex justify-between items-center">
+                    <h1 class="text-white font-semibold text-2xl tracking-[10px] ">TODO</h1>
+                    <div class="moon cursor-pointer"><img src="./images/icon-moon.svg" alt=""></div>
+                    <div class="sun hidden cursor-pointer"><img src="./images/icon-sun.svg" alt=""></div>
+                </div>
+                <div class="new w-full bg-white rounded-md mt-[3rem]  text-[#555555a9] h-9">
+                    <div class="flex items-center ps-3 gap-3 pt-2 text-xs ">
+                        <div class="check size-4 rounded-full border border-[#c0bebe]">
+                            <div class="hidden color size-4  justify-center items-center rounded-full border border-[#555555a9] bg-gradient-to-r from-[#69A0FB] to-[#9548DE]">
+                                <img src="./images/icon-check.svg" alt="">
+                            </div>
+    
+                        </div>
+                        <input class="w-full h-full outline-none bg-transparent" placeholder="Create a new todo..." type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-6  w-full  max-w-[33rem] m-auto translate-y-[-50px]">
+            <div class="list shadow-xl bg-white">
+                <div class="all">
+
+                    <div class="flex justify-center min-h-[10rem] items-center ">
+                           List is Empty now
+                    </div>
+
+                </div>
+           
+                <div class="text-xs text-[#c0bebe] h-10 flex items-center justify-between px-3">
+                    <p class="items-left"><span id="num">0</span> items left</p> 
+                    <p onclick="removeAll()" class="hover:cursor-pointer text-blue-500 clear">Clear completed</p>
+                </div>
+                <div class="h-10 flex items-center justify-center font-semibold text-[#c0bebe] gap-6 text-xs px-3">
+                    <p class="all-items hover:text-blue-500 hover:cursor-pointer">All</p>
+                    <p onclick="active()" class="active hover:text-blue-500 hover:cursor-pointer">Active</p>
+                    <p class="completed hover:text-blue-500 hover:cursor-pointer">Completed</p>
+                </div>
+            </div>
+        </div>
+     
+    </section>
+    <script src="./js.js"></script>
+</body>
+</html>
